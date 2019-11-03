@@ -42,7 +42,7 @@ def maze_generation(width, height):
 def draw_maze(maze):
     width = len(maze[0])
     height = len(maze)
-    print('█' * (width*2*+1))
+    print('█' * (width*2+1))
 
     for i in range(height*2):
         line = ['█']
