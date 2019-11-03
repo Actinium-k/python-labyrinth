@@ -3,9 +3,9 @@ from random import sample
 N, S, E, W, V = 1, 2, 4, 8, 16
 opposite = {N:S, S:N, E:W, W:E}
 move = {N: lambda x, y: (x, y-1),
-    S: lambda x, y: (x, y+1),
-    E: lambda x, y: (x+1, y),
-    W: lambda x, y: (x-1, y)}
+        S: lambda x, y: (x, y+1),
+        E: lambda x, y: (x+1, y),
+        W: lambda x, y: (x-1, y)}
 directions = lambda: sample((N, S, E, W), 4)
 
 def maze_generation(width, height):
@@ -63,4 +63,4 @@ def draw_maze(maze):
                 line.append('█')
         print(''.join(line))
 
-draw_maze(maze_generation(15, 15))
+draw_maze(maze_generation(15,15))
