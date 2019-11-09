@@ -1,6 +1,6 @@
 # Python Labyrinth
 
-*_Generate a labyrinth using the recursive backtracking algorithm_*
+*_Generates a labyrinth using the recursive backtracking algorithm_*
 
 ### How it works
 
@@ -20,7 +20,7 @@ W = 01000
 V = 10000
 ```
 
-Whenever we need to carve a wall, we use the | operator:
+Whenever we need to carve a wall, we use the | operator.
 
 ```python
 maze[0][0] = 0  #   00000

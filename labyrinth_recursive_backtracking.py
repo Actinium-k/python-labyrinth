@@ -14,24 +14,24 @@ def maze_generation(width, height):
     x, y = 0, 0
 
     while total_cells > 1:
-        for d in directions():
-            nx, ny = move[d](x, y)
+        for direction in directions():
+            nx, ny = move[direction](x, y)
             if not 0 <= nx < width or not 0 <= ny < height:
                 continue
             elif maze[ny][nx] == 0:
-                maze[y][x] |= d
-                maze[ny][nx] |= opposite[d]
+                maze[y][x] |= direction
+                maze[ny][nx] |= opposite[direction]
                 x, y = nx, ny
                 break
 
         else:
-            for d in directions():
-                nx, ny = move[d](x, y)
+            for direction in directions():
+                nx, ny = move[direction](x, y)
                 if (not 0 <= nx < width
                  or not 0 <= ny < height
                  or not maze[ny][nx] & V == 0):
                     continue
-                elif not maze[ny][nx] & opposite[d] == 0:
+                elif not maze[ny][nx] & opposite[direction] == 0:
                     maze[y][x] |= V
                     total_cells -= 1
                     x, y = nx, ny
@@ -63,4 +63,5 @@ def draw_maze(maze):
                 line.append('█')
         print(''.join(line))
 
+# Edit the values to change the height and width of the labyrinth
 draw_maze(maze_generation(15,15))
