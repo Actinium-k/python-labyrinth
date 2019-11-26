@@ -1,6 +1,7 @@
 # Python Labyrinth
 
 *_Generates a labyrinth using the recursive backtracking algorithm_*
+*Todo: implement more algorithms (Hunt and Kill, Aldous-Broder, Kruskal)
 
 ### How it works
 
