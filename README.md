@@ -38,12 +38,12 @@ maze[0][0] & S == 0 # & 00010
 True                # = 00010 (Result is not 0, flag S is present)
 
 maze[0][0] & N == 0 # & 00001
-False               # = 00000 (Result if 0, flag N is absent)
+False               # = 00000 (Result is 0, flag N is absent)
 ```
 
 ### Recursive backtracking
 
 1. Choose a starting point
-2. Randomly choose an adjacent cell, check if the cell is valid and hasn't been visited, and carve if the latter are false
+2. Randomly choose an adjacent cell, check if the cell is valid and hasn't been visited, and carve if the latter is false
 3. If all adjacents cells have been visited, go back to the previous cell
-4. When all cells have been visited, end the function
+4. When all cells have been visited, end the program
